@@ -9,7 +9,7 @@
     "setup-production-app": "npm i && cd client && npm i && npm run build ",
     "server": "nodemon server",
     "client": "cd client && npm run dev",
-    "dev": "nodemon server.js"
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
