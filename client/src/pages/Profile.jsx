@@ -5,6 +5,22 @@ import { useNavigation, Form } from "react-router-dom";
 import customFetch from "../utils/customFetch";
 import { toast } from "react-toastify";
 
+export const action = async ({ request }) => {
+  const formData = await request.formData();
+  const file = formData.get("avatar");
+  if (file && file.size > 10000000) {
+    toast.error("Image size too large");
+    return null;
+  }
+  try {
+    await customFetch.patch("/users/update-user", formData);
+    toast.success("Profile updated successfully");
+  } catch (error) {
+    toast.error(error?.response?.data?.msg);
+  }
+  return null;
+};
+
 const Profile = () => {
   const { user } = useOutletContext();
   const { name, lastName, email, location } = user;
@@ -34,8 +50,8 @@ const Profile = () => {
             labelText='last name'
             defaultValue={lastName}
           />
-          <FormRow type='email' name='name' defaultValue={email} />
-          <FormRow type='location' name='name' defaultValue={location} />
+          <FormRow type='email' name='email' defaultValue={email} />
+          <FormRow type='location' name='location' defaultValue={location} />
           <button
             className='btn btn-block form-btn'
             type='submit'
