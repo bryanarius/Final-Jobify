@@ -8,7 +8,7 @@ import mongoose from "mongoose";
 import cookieParser from "cookie-parser";
 import cloudinary from "cloudinary";
 
-// routers
+// routerss
 import jobRouter from "./routes/jobRouter.js";
 import authRouter from "./routes/authRouter.js";
 import userRouter from "./routes/userRouter.js";
