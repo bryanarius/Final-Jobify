@@ -11,3 +11,13 @@ Project in Action - [Jobify](https://bryansjobify.onrender.com/)
 ### Screenshots
 
 ![screenshot](/public/assets/jobifyhomepage.jpg)
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- React.JS
+- NodeJs
+- MongoDB
+- Express
