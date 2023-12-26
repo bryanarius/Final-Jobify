@@ -10,9 +10,16 @@ Project in Action - [Jobify](https://bryansjobify.onrender.com/)
 
 ### Screenshots
 
+## Home Page
 ![screenshot](/public/assets/jobifyhomepage.jpg)
+
+## Login
 ![screenshot](/public/assets/login.jpg)
+
+## Register
 ![screenshot](/public/assets/register.jpg)
+
+## Dashboard
 ![screenshot](/public/assets/dashboard.jpg)
 
 ### Built with
