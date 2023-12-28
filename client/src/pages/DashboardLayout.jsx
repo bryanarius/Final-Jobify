@@ -11,11 +11,19 @@ import { BigSidebar, Navbar, SmallSidebar, Loading } from "../components";
 import { createContext, useContext, useState } from "react";
 import customFetch from "../utils/customFetch";
 import { toast } from "react-toastify";
+import { useQuery } from "@tanstack/react-query";
 
-export const loader = async () => {
-  try {
+const userQuery = {
+  queryKey: ["user"],
+  queryFn: async () => {
     const { data } = await customFetch.get("/users/current-user");
     return data;
+  },
+};
+
+export const loader = (queryClient) => async () => {
+  try {
+    return await queryClient.ensureQueryData(userQuery);
   } catch (error) {
     return redirect("/");
   }
@@ -23,8 +31,8 @@ export const loader = async () => {
 
 const DashboardContext = createContext();
 
-const DashboardLayout = ({ isDarkThemeEnabled }) => {
-  const { user } = useLoaderData();
+const DashboardLayout = ({ isDarkThemeEnabled, queryClient }) => {
+  const { user } = useQuery(userQuery).data;
   const navigate = useNavigate();
   const navigation = useNavigation();
   const isPageLoading = navigation.state === "loading";
