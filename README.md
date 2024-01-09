@@ -10,18 +10,18 @@ Project in Action - [Jobify](https://bryansjobify.onrender.com/)
 
 ### Screenshots
 
-## Home Page
+## Landing Page
 ![screenshot](/public/assets/jobifyhomepage.jpg)
-
+users chose to create an account or login
 ## Login
 ![screenshot](/public/assets/login.jpg)
-
+where for users to log into an account
 ## Register
 ![screenshot](/public/assets/register.jpg)
-
+where users register an account
 ## Dashboard
 ![screenshot](/public/assets/dashboard.jpg)
-
+custom dashboard reflecting the data in the account that is logged in
 ### Built with
 
 - Semantic HTML5 markup
