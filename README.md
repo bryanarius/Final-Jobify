@@ -7,7 +7,7 @@ Resources
 #### Demo
 
 Project in Action - [Jobify](https://bryansjobify.onrender.com/)\
-<mark>Project takes about 30 seconds to spin up server</mark>
+<span style="background-color: #FFFF00">Project takes about 30 seconds to spin up server</span>
 
 ### Screenshots
 
