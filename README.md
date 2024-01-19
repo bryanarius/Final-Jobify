@@ -1,6 +1,6 @@
 # Final-Jobify
 
-a full-stack application that emulates a job listing platform called Jobify. Made from scratch using MongoDB, Express, React, and Node.js
+a full-stack application that emulates a job tracking platform called Jobify. Made from scratch using MongoDB, Express, React, and Node.js
 
 Resources
 
